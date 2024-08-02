@@ -1,0 +1,374 @@
+
+
+
+
+
+
+/* 
+body {
+  background: #5B6281;
+  color: #40455E;
+  font: 400 100%/1.6 "Noto Sans", sans-serif;
+} */
+
+.hero {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100vh;
+  padding: 2rem;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-size: 1.15rem;
+}
+
+/* .hero::before {
+  transform: rotate(-5deg) scaleY(0);
+  transform-origin: 100% 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  right: -5%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #F4F4F4;
+  animation: untransform normal 1 1.25s 1.25s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+} */
+
+.hero::after {
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url(''); */
+  animation: untransform normal 1 2.5s 1.25s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  z-index: -1;
+}
+
+.hero__title {
+  margin-bottom: 15px;
+  font-size: 3.75rem;
+  overflow: hidden;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hero__title span {
+  display: inline-block;
+  transform: rotate(30deg) translateY(2em);
+  transform-origin: 0 100%;
+  animation: untransform normal 1 1.25s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.hero__copy {
+  margin-bottom: 20px;
+  max-width: 50ch;
+  transform: translateY(2em);
+  opacity: 0;
+  animation: untransform normal 1 3.75s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.hero__link {
+  color: inherit;
+  transform: translateY(2em);
+  opacity: 0;
+  animation: untransform normal 1 5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes untransform {
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+.about-us {
+    background-color: white;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .about-section, .mission-section, .history-section, .team-section, .services-section, .testimonials-section, .cta-section, .contact-section, .timings-section {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    color: red;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .services-list {
+    margin-top: 10px;
+  }
+  
+  .service-title {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+  }
+  
+  .team-list {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .testimonials-section blockquote {
+    font-style: italic;
+    border-left: 4px solid red;
+    padding-left: 10px;
+    color: black;
+  }
+  
+  .cta-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+ 
+ 
+ 
+ 
+ 
+  /* @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+  * {
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  body {
+    display: grid;
+    padding: 3vmin;
+    background: #e6ded7;
+  }
+   */
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://i.pinimg.com/564x/99/89/2f/99892f1b3c1c2119881a1e63ba6bde5c.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  .join-us {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .join-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ee3d3d;
+  }
+  
+  .join-us p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .join-us .button {
+    color: white;
+    background-color: #ee3d3d;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .join-us .button:hover {
+    background-color: #c62b2b;
+  }
+  
+  .join-us .contact-info,
+  .join-us .timings {
+    margin-top: 1rem;
+    text-align: left;
+    color: #666;
+  }
+  
+  .join-us .contact-info h3,
+  .join-us .timings h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .join-us .contact-info p,
+  .join-us .timings p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+ /* .bg-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .transition-shadow {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .transition-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        } */
+
+
+
+
+
+
+        /* src/HorizontalScroll.css */
+body {
+  @apply h-screen w-full;
+}
+
+.test {
+  @apply h-screen bg-red-500 w-full;
+}
+
+.container {
+  @apply flex-nowrap;
+  width: 600%;
+  display: flex;
+}
+
+.panel {
+  @apply flex justify-center items-center text-white relative box-border p-2;
+  width: 100%;
+  height: 100vh;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.panel h1 {
+  @apply text-white font-light;
+  font-size: 1.8em;
+  margin: 0 auto;
+}
+
+.gray {
+  @apply bg-gray-700;
+}
+
+.blue {
+  @apply bg-blue-600;
+}
+
+.orange {
+  @apply bg-orange-600;
+}
+
+.red {
+  @apply bg-red-700;
+}
+
+.purple {
+  @apply bg-purple-600;
+}
+
+.green {
+  @apply bg-green-600;
+}

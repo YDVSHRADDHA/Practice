@@ -1,0 +1,253 @@
+  const [notifications, setNotifications] = useState([]);
+  const [urgentOpenings, setUrgentOpenings] = useState([]);
+
+  // Simulating fetching data from an API
+  useEffect(() => {
+    // Replace with your actual data fetching logic
+    const fetchNotifications = async () => {
+      const data = [
+        {
+          imgSrc: "https://goodmenproject.com/wp-content/uploads/2024/01/iStock-1152837936.jpg.webp",
+          title: "Class 11th & CBSE Commerce",
+          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration...",
+          date: "12-08-2024",
+          time: "20:38 pm"
+        },
+        {
+          imgSrc: "https://gg4l.com/wp-content/uploads/Unorganized/educators-scaled.jpg",
+          title: "Class 9th & CBSE",
+          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration...",
+          date: "12-08-2024",
+          time: "20:38 pm"
+        },
+        {
+          imgSrc: "https://st4.depositphotos.com/1594308/40881/i/1600/depositphotos_408819406-stock-photo-young-mother-dark-long-hair.jpg",
+          title: "Class 9th & CBSE",
+          description: "Location Near by Sagar University",
+          date: "12-08-2023",
+          time: "20:38 pm"
+        },
+        {
+          imgSrc: "https://northwest.education/wp-content/uploads/2020/10/CHICAGO-BOOTH_5-680x380.jpg",
+          title: "Class 9th & CBSE",
+          description: "Location Krond Aasaram Nagar",
+          date: "12-08-2023",
+          time: "20:38 pm"
+        }
+      ];
+      setNotifications(data);
+    };
+
+    const fetchUrgentOpenings = async () => {
+      const data = [
+        {
+          title: "Class 8th ICSE BOARD (Preference Female Tutor)",
+          subjects: "Math, Science, English",
+          location: "Bagsewaniya",
+          additionalInfo: "Flexible working hours, competitive pay",
+          days: 2,
+          hours: 11,
+          minutes: 30,
+          seconds: 3
+        },
+        {
+          title: "Class 11th CBSE BOARD (Preference Female Tutor)",
+          subjects: "Commerce Stream",
+          location: "Ashima Mall",
+          additionalInfo: "Flexible working hours, competitive pay",
+          days: 5,
+          hours: 11,
+          minutes: 30,
+          seconds: 3
+        }
+      ];
+      setUrgentOpenings(data);
+    };
+
+    fetchNotifications();
+    fetchUrgentOpenings();
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
+  
+  {/*MAIN*/}
+  <main>
+ {/* <div className="divisions division_2 flex"> 
+      <section className="flex_content padding_2x">
+        <div className="title_header">
+          <h2 className="title medium">Join Our Team of Expert Tutors</h2>
+          <p>Be part of a community dedicated to educational excellence and student success.</p>
+        </div>
+        <marquee direction="up" id="notification" onMouseOver={() => document.getElementById('notification').stop()} onMouseLeave={() => document.getElementById('notification').start()}>
+          {notifications.map((notification, index) => (
+            <a href="#" className="flex fixed_flex" key={index}>
+              <figure>
+                <img src={notification.imgSrc} alt={notification.title} loading="lazy" />
+              </figure>
+              <article>
+                <h3 className="title">{notification.title}</h3>
+                <p>{notification.description}</p>
+                <aside className="fixed_flex">
+                  <span><i className="fa fa-calendar" /> {notification.date}</span>
+                  <span><i className="fa fa-clock-o" /> {notification.time}</span>
+                </aside>
+              </article>
+            </a>
+          ))}
+        </marquee>
+      </section>
+
+
+
+
+
+
+
+
+      <section className="flex_content padding_2x" id="event">
+        <div className="title_header">
+          <h2 className="title medium"> Urgent Openings</h2>
+          <p>We have an immediate need for tutors for the following classes and subjects</p>
+          <ul className="logo-slider event-slider">
+            {urgentOpenings.map((opening, index) => (
+              <li key={index}>
+                <h2 className="title small">{opening.title}</h2>
+                <p>{opening.subjects}</p>
+                <div className="mb-6">
+                  <p className="font-semibold">Location: {opening.location}</p>
+                  <p className="font-semibold">Additional Information: {opening.additionalInfo}</p>
+                </div>
+                <aside className="fixed_flex">
+                  <span>{opening.days}<sub>day</sub></span>
+                  <span>{opening.hours}<sub>hrs</sub></span>
+                  <span>{opening.minutes}<sub>min</sub></span>
+                  <span>{opening.seconds}<sub>sec</sub></span>
+                </aside>
+                <a href="#" className="btn btn_2">BOOK A DEMO CLASS</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </div>  */}
+
+
+{/* our expert */}
+
+{/* <section class="container">
+	<div class="category_container">
+		<div class="content">
+			<img src="https://i.pinimg.com/564x/b5/ec/7c/b5ec7c850e7099ab05fead7238988126.jpg" class="professio_image" alt="Profession" />
+			<img src=".../.././images/srs1.png" class="profile_image" alt="Profile" />
+			<div class="profile_detail">
+				<span>John Doe</span>
+				<p>UI/UX Designer + Graphic Designer</p>
+			</div>
+
+			<div class="wrapper">			
+				<div class="profile_quote">
+					<p>"UI is the saddle, the stirrups, & the reins. UX is the feeling you get being able to ride the horse."</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="content">
+			<img src="https://i.pinimg.com/564x/fe/ed/1a/feed1ab70ae6d60484bb901c9e91590e.jpg" class="profession_image" alt="Profession" />
+			<img src=".../.././images/srs2.png" class="profile_image" alt="Profile" />
+			<div class="profile_detail">
+				<span>Prince Akashi</span>
+				<p>Photographer + Model</p>
+			</div>
+			<div class="wrapper">				
+				<div class="profile_quote">
+					<p>"If you see something that moves you, and then snap it, you keep a moment."</p>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<img src="https://i.pinimg.com/736x/75/ee/cc/75eecc28287c7970836c279b70d063c0.jpg" class="profession_image" alt="Profession" />
+			<img src=".../.././images/srs3.png" class="profile_image" alt="Profile" />
+			<div class="profile_detail">
+				<span>Rafaella Mendes</span>
+				<p>Fashion Designer + Model</p>
+			</div>
+			<div class="wrapper">				
+				<div class="profile_quote">
+					<p>"My mission in life is not merely to survive, but to thrive and to do so with some passion, some compassion, some humor, and some style."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> */}
+
+
+
+
+
+
+
+
+    {/*division_3*/}
+    {/* <div className="divisions division_3 padding_2x">
+      <section className="title_header">
+        <h1 className="title">Our Experts</h1>
+        <p>Replenish man have thing gathering lights yielding shall you </p>
+        <span className="bar" />
+      </section>
+
+      <section className="slider bg-transparent padding_0x">
+      <ul className="card logo-slider blog-slider flex gap-3">
+        {teachers.map(teacher => (
+          <li key={teacher.id}>
+            <figure>
+              <img src={teacher.imageUrl} alt={teacher.name} loading="lazy" />
+            </figure>
+            <article className="padding_1x">
+              <strong className="tag">{teacher.profession}</strong>
+              <a href="#" className="title small">{teacher.name}</a>
+              <p>Expert in: {teacher.subject}</p>
+              <aside className="fixed_flex">
+                <span className="flex-content">
+                  <a href="#"><i className="fa fa-calendar" /> {teacher.date}</a>
+                  <a href="#"><i className="fa fa-clock-o" /> {teacher.time}</a>
+                </span>
+              </aside>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </section>
+    </div> */}
+
+
+
+
+
+ {/* <section className="flex_content">
+        <figure>
+          <img src="https://i.postimg.cc/KvwFLrVF/author.png" alt loading="lazy" />
+        </figure>
+      </section>
+      <section className="flex_content padding_2x">
+        <h2 className="title medium">Our Message</h2>
+        <p>"It is easier to build strong children than to repair broken men". A wise quote referring to the role that children could play in laying the foundation of a strong nation. I believe that the foundation of a strong nation depends on the way its children are cared for and nurtured. In order to build a strong nation, we must instill good values in our children providing them love and care, guiding them through thick and thin till they become confident and strong enough. This all can be done through “Quality education”.</p>
+      </section> */}
+
+    
+
+
+    
+    {/*division_4*/}
+  
+  </main>
+
+
