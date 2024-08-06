@@ -20,12 +20,15 @@ const TeacherScroller = ({ teachers }) => {
   };
 
   useEffect(() => {
-    if (scrollerRef.current) {
-      scrollerRef.current.addEventListener('scroll', handleScroll);
-      return () => {
-        scrollerRef.current.removeEventListener('scroll', handleScroll);
-      };
+    const currentScroller = scrollerRef.current;
+    if (currentScroller) {
+      currentScroller.addEventListener('scroll', handleScroll);
     }
+    return () => {
+      if (currentScroller) {
+        currentScroller.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   return (
@@ -50,15 +53,14 @@ const TeacherScroller = ({ teachers }) => {
         {teachers.map((teacher, index) => (
           <div
             key={index}
-            className={`w-52 mx-2 text-center bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition-shadow duration-300 ${activeIndex === index ? 'bg-red-100' : ''
-              }`}
+            className={`w-52 mx-2 text-center bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition-shadow duration-300 ${activeIndex === index ? 'bg-red-100' : ''}`}
           >
             <img src={teacher.image} alt={teacher.name} className="w-full h-32 object-cover rounded-full mb-4" />
-            <div className="text-gray-00">
-              <h3 className="mb-2 text-xl font-semibold  text-gray-700">{teacher.name}</h3>
-              <p className="mb-1  text-gray-700">{teacher.subject}</p>
-              <p className="mb-1 text-gray-700">{teacher.experience} years exp</p>
-              <p className="mb-2 text-xl font-bold  text-gray-700">{teacher.university}</p>
+            <div className="text-gray-700">
+              <h3 className="mb-2 text-xl font-semibold">{teacher.name}</h3>
+              <p className="mb-1">{teacher.subject}</p>
+              <p className="mb-1">{teacher.experience} years exp</p>
+              <p className="mb-2 text-xl font-bold">{teacher.university}</p>
             </div>
           </div>
         ))}

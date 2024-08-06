@@ -40,56 +40,6 @@ const Services = () => {
 
 
 
-
-{/* hero section */}
- {/* <div className="relative w-full h-[320px]" id="home">
-  <div className="absolute inset-0 opacity-70">
-    <img src="https://image1.jdomni.in/banner/13062021/0A/52/CC/1AF5FC422867D96E06C4B7BD69_1623557926542.png" alt="Background Image" className="object-cover object-center w-full h-full" />
-  </div>
-  <div className="absolute inset-9 flex flex-col md:flex-row items-center justify-between">
-    <div className="md:w-1/2 mb-4 md:mb-0">
-      <h1 className="text-grey-700 font-medium text-4xl md:text-5xl leading-tight mb-2">Bappa Flour mill</h1>
-      <p className="font-regular text-xl mb-8 mt-4">One stop solution for flour grinding services</p>
-      <a href="#contactUs" className="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858]  transition duration-200">Contact
-        Us</a>
-    </div>
-  </div>
-</div> */}
-{/* 
-<div className="banner bg-[#ff693d] rounded-b-lg relative z-10 p-6 flex justify-between items-center">
-  <div className="left text-white max-w-lg">
-    <h1 className="text-4xl font-bold mb-4">Vedantu Learning Centres <br /> Now in <span className="text-yellow-400">Your City</span></h1>
-    <p className="bg-yellow-400 inline-block px-3 py-1 text-black font-semibold mb-6">Offline Courses for JEE | NEET | 8-10 Foundation</p>
-    <div className="buttons mt-4">
-      <button className="bg-black text-white px-6 py-3 rounded-md mr-4">Book a Visit</button>
-      <button className="bg-white text-[#ff693d] px-6 py-3 rounded-md">Download Brochure</button>
-    </div>
-  </div>
-  <div className="right bg-white p-6 rounded-md shadow-md w-96">
-    <h2 className="text-[#ff693d] text-2xl font-bold mb-2">Admission Open</h2>
-    <p className="text-gray-700 mb-2">Academic Session 2024-25</p>
-    <p className="text-gray-500 text-sm mb-4">Get 10% off* on early bird registrations</p>
-    <button className="bg-[#1a202c] text-white px-6 py-2 rounded-md mb-2">Register Now</button>
-    <p className="text-xs text-gray-400 mb-4">*T&C Apply</p>
-    <div className="slider-container">
-      <div className="slider relative">
-        <div className="slide">
-          <img src="path/to/your/image1.jpg" alt="Slide 1" className="w-full h-auto rounded-md" />
-          <div className="text-sm text-gray-600 mt-2">IIT-JEE | NEET | Foundation</div>
-        </div>
-      
-      </div>
-     
-      <div className="controls absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        <button className="w-3 h-3 bg-gray-400 rounded-full"></button>
-        <button className="w-3 h-3 bg-gray-400 rounded-full"></button>
-    
-      </div>
-    </div>
-  </div>
-</div> */}
-
-
 {/* header */}
   {/* Banner */}
 

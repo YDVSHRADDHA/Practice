@@ -5,8 +5,6 @@ import './About.css';
 import React, { useEffect, useRef } from 'react';
  
 const About = () => {
-  const image="data:image/jpeg;base64,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";
-  const joinUsRef = useRef(null);
 
   
   return (
@@ -89,52 +87,49 @@ const About = () => {
     
 
  
+    <div className="bg-white">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
+          <p className="mt-4 text-gray-500">
+            Our tutoring services are designed to provide a comprehensive educational experience that goes beyond traditional learning. We focus on holistic development, making sure students are well-prepared for their academic and personal growth.
+          </p>
 
-    <div class="bg-white">
-  <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-    <div>
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
-      <p class="mt-4 text-gray-500">Our tutoring services are designed to provide a comprehensive educational experience that goes beyond traditional learning. We focus on holistic development, making sure students are well-prepared for their academic and personal growth.</p>
-
-      <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Experienced Tutors</dt>
-          <dd class="mt-2 text-sm text-gray-500">Our tutors are highly qualified and experienced in their respective subjects.</dd>
+          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Experienced Tutors</dt>
+              <dd className="mt-2 text-sm text-gray-500">Our tutors are highly qualified and experienced in their respective subjects.</dd>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Flexible Scheduling</dt>
+              <dd className="mt-2 text-sm text-gray-500">We offer flexible scheduling options to meet your needs.</dd>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Personalized Learning</dt>
+              <dd className="mt-2 text-sm text-gray-500">Our tutoring sessions are tailored to each student's learning style.</dd>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Subject Specialization</dt>
+              <dd className="mt-2 text-sm text-gray-500">Our tutors specialize in a wide range of subjects including Mathematics, Science, English, and more, providing expert guidance in each area.</dd>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Progress Tracking</dt>
+              <dd className="mt-2 text-sm text-gray-500">We regularly monitor and report on each student's progress, offering insights and adjustments to keep them on the path to success.</dd>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Extra-Curricular Guidance</dt>
+              <dd className="mt-2 text-sm text-gray-500">Beyond academics, we also provide guidance in extra-curricular activities to help students develop well-rounded skills.</dd>
+            </div>
+          </dl>
         </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Flexible Scheduling</dt>
-          <dd class="mt-2 text-sm text-gray-500">We offer flexible scheduling options to meet your needs.</dd>
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+          <img src="https://i.pinimg.com/564x/8f/87/07/8f87076b9fdce63a484954ba7f6f2804.jpg" alt=" " className="rounded-lg bg-gray-100" />
+          <img src="https://i.pinimg.com/564x/0c/dc/d2/0cdcd20265862519b8e65ffc5c2fc675.jpg" alt=" " className="rounded-lg bg-gray-100" />
+          <img src="https://i.pinimg.com/564x/19/99/a9/1999a9699d3b1515d566939e7e634d0c.jpg" alt=" " className="rounded-lg bg-gray-100" />
+          <img src="https://i.pinimg.com/564x/b9/f5/50/b9f550eb3f24491aacf26311a3b864ae.jpg" alt=" " className="rounded-lg bg-gray-100" />
         </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Personalized Learning</dt>
-          <dd class="mt-2 text-sm text-gray-500">
-          ur tutoring sessions are tailored to each student's learning style.
-          6.25&quot; x 3.55&quot; x 1.15&quot;</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Subject Specialization</dt>
-          <dd class="mt-2 text-sm text-gray-500">Our tutors specialize in a wide range of subjects including Mathematics, Science, English, and more, providing expert guidance in each area.</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Progress Tracking</dt>
-          <dd class="mt-2 text-sm text-gray-500">We regularly monitor and report on each student's progress, offering insights and adjustments to keep them on the path to success.</dd>
-        </div>
-        <div class="border-t border-gray-200 pt-4">
-          <dt class="font-medium text-gray-900">Extra-Curricular Guidance</dt>
-          <dd class="mt-2 text-sm text-gray-500">Beyond academics, we also provide guidance in extra-curricular activities to help students develop well-rounded skills.</dd>
-        </div>
-      </dl>
+      </div>
     </div>
-    <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-    <img src="https://i.pinimg.com/564x/8f/87/07/8f87076b9fdce63a484954ba7f6f2804.jpg" alt="Walnut card tray filled with cards and card angled in dedicated groove." class="rounded-lg bg-gray-100"/>
-         <img src="https://i.pinimg.com/564x/0c/dc/d2/0cdcd20265862519b8e65ffc5c2fc675.jpg" alt="Walnut card tray with white powder coated steel divider and 3 punchout holes." class="rounded-lg bg-gray-100"/>
-
-      <img src="https://i.pinimg.com/564x/19/99/a9/1999a9699d3b1515d566939e7e634d0c.jpg" alt="Top down view of walnut card tray with embedded magnets and card groove." class="rounded-lg bg-gray-100"/>
-      <img src="https://i.pinimg.com/564x/b9/f5/50/b9f550eb3f24491aacf26311a3b864ae.jpg" alt="Side of walnut card tray with card groove and recessed card area." class="rounded-lg bg-gray-100"/>
-    </div>
-  </div>
-</div> 
- 
  
 
  
@@ -162,68 +157,66 @@ const About = () => {
     {/* <section id="our-team" class="bg-gray-100 py-32"> */}
 
 
-    <h2 class="text-3xl font-bold text-center mb-8 text-red-600">Meet Our Team</h2>
+    <h2  classNames="text-3xl font-bold text-center mb-8 text-red-600">Meet Our Team</h2>
         {/* <div class="container  mx-auto px-4"> */}
           
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Team Member 1 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/236x/77/71/68/7771683223d86b237a3304d6f32828b9.jpg" alt="Team Member 1" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Sona Yadav</h3>
+        <p className="text-gray-700">Founder</p>
+      </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* <!-- Team Member 1 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/1.jpg" alt="Team Member 1" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Sona Yadav</h3>
-                    <p class="text-gray-700">Founder</p>
-                </div>
+      {/* Team Member 2 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/da/b2/96/dab296dd30916b2f45d86ebf304500ea.jpg" alt="Team Member 2" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Jane Smith</h3>
+        <p className="text-gray-700">Manager</p>
+      </div>
 
-                {/* <!-- Team Member 2 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/4.jpg" alt="Team Member 2" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
-                    <p class="text-gray-700">Manager</p>
-                </div>
+      {/* Team Member 3 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/34/55/6c/34556cfe1c33888acacf05635b48dd16.jpg" alt="Team Member 3" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Michael Davis</h3>
+        <p className="text-gray-700">Data Manager</p>
+      </div>
 
-                {/* <!-- Team Member 3 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/3.jpg" alt="Team Member 3" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Michael Davis</h3>
-                    <p class="text-gray-700">Data Manager</p>
-                   
-                </div>
+      {/* Team Member 4 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/ec/ed/31/eced31446e277b00857fef3ca1476d8a.jpg" alt="Team Member 4" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Peter Johnson</h3>
+        <p className="text-gray-700">HR</p>
+      </div>
 
-                {/* <!-- Team Member 4 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/2.jpg" alt="Team Member 4" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Peter Johnson</h3>
-                    <p class="text-gray-700">HR</p>
-                </div>
+      {/* Team Member 5 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/5f/0b/09/5f0b0942760fe4ec7331e04f4158801a.jpg" alt="Team Member 5" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Shraddha</h3>
+        <p className="text-gray-700">Designer</p>
+      </div>
 
-                {/* <!-- Team Member 5 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/5.jpg" alt="Team Member 5" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Shraddha</h3>
-                    <p class="text-gray-700">Designer</p>
-                </div>
+      {/* Team Member 6 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/236x/0d/a8/a3/0da8a3f6bd8082b10736b73bf9adcef5.jpg" alt="Team Member 6" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Jatin</h3>
+        <p className="text-gray-700">Developer</p>
+      </div>
 
-                {/* <!-- Team Member 6 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/6.jpg" alt="Team Member 6" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Jatin</h3>
-                    <p class="text-gray-700">Developer</p>
-                </div>
+      {/* Team Member 7 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/bf/af/f3/bfaff362282848685f6bc3c43d6e5dfd.jpg" alt="Team Member 7" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
+        <p className="text-gray-700">Content Writer</p>
+      </div>
 
-                {/* <!-- Team Member 7 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/7.jpg" alt="Team Member 7" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
-                    <p class="text-gray-700">Content Writer</p>
-                </div>
-
-                {/* <!-- Team Member 8 --> */}
-                <div class="bg-white rounded-lg shadow-md p-6 my-6 text-center">
-                    <img src="https://spacema-dev.com/elevate/assets/images/team/8.jpg" alt="Team Member 8" class="w-full rounded-full mb-4"/>
-                    <h3 class="text-xl font-semibold mb-2">David Wilson</h3>
-                    <p class="text-gray-700">Seo specialist</p>
-                </div>
-            </div>
+      {/* Team Member 8 */}
+      <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center">
+        <img src="https://i.pinimg.com/564x/4d/9c/34/4d9c34104c98b22ea66bf6b8f64ff5b6.jpg" alt="Team Member 8" className="w-full rounded-full mb-4" />
+        <h3 className="text-xl font-semibold mb-2">David Wilson</h3>
+        <p className="text-gray-700">SEO Specialist</p>
+      </div>
+    </div>
           {/* <div class="text-center mt-8">
             <a href="https://spacema-dev.com/elevate-free-tailwind-business-template/" class="bg-indigo-700 hover:bg-pink-600 text-white font-semibold px-4 py-2 rounded-full inline-block">Free Tailwind Template</a>
         </div> */}
@@ -232,44 +225,70 @@ const About = () => {
     
          
         {/* <!-- ======= Our Clients Section ======= --> */}
-        <section class="min-h-screen grid grid-cols-4 lg:grid-cols-12 gap-14 max-w-screen-xl mx-auto py-10 px-7 md:px-16">
-  <div class="col-span-4 lg:col-span-5 ">
-    <div class="relative h-full">
-      <img src="https://i.pinimg.com/564x/24/c8/14/24c81450119a0300b769bd62d33af216.jpg" alt="Leslie Alexander" class="w-full rounded-xl shadow-md md:rounded-2xl md:shadow-lg h-48 md:h-72 lg:h-full object-cover"/>
-      <div class="absolute bottom-0 text-white bg-gradient-to-b from-transparent to-gray-700 rounded-2xl h-auto p-5 md:p-10">
-        <span class="mb-2 inline-block text-sm font-light">Leslie Alexander</span>
-        <p class="text-sm leading-relaxed">“I’m amazed that I’ve only recently found SRS Services. It’s exactly what I’ve been searching for in a tutoring service. I’m excited about the possibilities and grateful for this excellent solution!”</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-span-4 lg:col-span-7 flex flex-col justify-center">
-    <span class="inline-block mb-3 uppercase text-sm tracking-wide font-medium text-gray-900">Testimonial</span>
-    <h1 class="text-4xl md:text-5xl md:leading-tight font-bold text-gray-900 xl:max-w-full">What do they think <span class="text-red-600">after using</span> SRS Services</h1>
-    <div class="grid gap-10 lg:max-w-xl pt-10 md:pt-14">
-      <div class="sm:flex gap-6 items-center">
-        <img src="https://i.pinimg.com/564x/ae/0c/77/ae0c777e68b0be2203bc28d241cbbcb2.jpg" alt="Esther Howard" class="w-24 h-24 object-cover rounded-2xl flex-none"/>
-        <div>
-          <span class="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Esther Howard</span>
-          <p class="text-sm leading-relaxed font-semibold text-gray-900">““You should try out SRS Services. They organize all the tutoring schedules very neatly. It's still in the early stages but it's great so far.”</p>
+        <section className="min-h-screen grid grid-cols-4 lg:grid-cols-12 gap-14 max-w-screen-xl mx-auto py-10 px-7 md:px-16">
+      <div className="col-span-4 lg:col-span-5">
+        <div className="relative h-full">
+          <img 
+            src="https://i.pinimg.com/564x/24/c8/14/24c81450119a0300b769bd62d33af216.jpg" 
+            alt="Leslie Alexander" 
+            className="w-full rounded-xl shadow-md md:rounded-2xl md:shadow-lg h-48 md:h-72 lg:h-full object-cover" 
+          />
+          <div className="absolute bottom-0 text-white bg-gradient-to-b from-transparent to-gray-700 rounded-2xl h-auto p-5 md:p-10">
+            <span className="mb-2 inline-block text-sm font-light">Leslie Alexander</span>
+            <p className="text-sm leading-relaxed">
+              “I’m amazed that I’ve only recently found SRS Services. It’s exactly what I’ve been searching for in a tutoring service. I’m excited about the possibilities and grateful for this excellent solution!”
+            </p>
+          </div>
         </div>
       </div>
-      <div class="sm:flex gap-6 items-center border-t border-gray-200 pt-12 sm:border-0 sm:pt-0">
-         <img src="https://i.pinimg.com/564x/f4/b5/55/f4b5557ef2c22deb3ffd43cbceb5e524.jpg" alt="Eleanor Pena" class="w-24 h-24 object-cover rounded-2xl flex-none"/>
-        <div>
-          <span class="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Eleanor Pena</span>
-          <p class="text-sm leading-relaxed font-semibold text-gray-900">“Wow, can't believe I have only just found SRS Services. I've been looking for such a reliable tutor service for years, super excited! Thank you, team, for developing this”</p>
+      <div className="col-span-4 lg:col-span-7 flex flex-col justify-center">
+        <span className="inline-block mb-3 uppercase text-sm tracking-wide font-medium text-gray-900">Testimonial</span>
+        <h1 className="text-4xl md:text-5xl md:leading-tight font-bold text-gray-900 xl:max-w-full">
+          What do they think <span className="text-red-600">after using</span> SRS Services
+        </h1>
+        <div className="grid gap-10 lg:max-w-xl pt-10 md:pt-14">
+          <div className="sm:flex gap-6 items-center">
+            <img 
+              src="https://i.pinimg.com/564x/ae/0c/77/ae0c777e68b0be2203bc28d241cbbcb2.jpg" 
+              alt="Esther Howard" 
+              className="w-24 h-24 object-cover rounded-2xl flex-none" 
+            />
+            <div>
+              <span className="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Esther Howard</span>
+              <p className="text-sm leading-relaxed font-semibold text-gray-900">
+                “You should try out SRS Services. They organize all the tutoring schedules very neatly. It's still in the early stages but it's great so far.”
+              </p>
+            </div>
+          </div>
+          <div className="sm:flex gap-6 items-center border-t border-gray-200 pt-12 sm:border-0 sm:pt-0">
+            <img 
+              src="https://i.pinimg.com/564x/f4/b5/55/f4b5557ef2c22deb3ffd43cbceb5e524.jpg" 
+              alt="Eleanor Pena" 
+              className="w-24 h-24 object-cover rounded-2xl flex-none" 
+            />
+            <div>
+              <span className="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Eleanor Pena</span>
+              <p className="text-sm leading-relaxed font-semibold text-gray-900">
+                “Wow, can't believe I have only just found SRS Services. I've been looking for such a reliable tutor service for years, super excited! Thank you, team, for developing this”
+              </p>
+            </div>
+          </div>
+          <div className="sm:flex gap-6 items-center border-t border-gray-200 pt-12 sm:border-0 sm:pt-0">
+            <img 
+              src='https://i.pinimg.com/564x/6d/63/e0/6d63e0aba7529d07dac5fbe5a6f37613.jpg' 
+              alt="Dianner Russell" 
+              className="w-24 h-24 object-cover rounded-2xl flex-none" 
+            />
+            <div>
+              <span className="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Dianner Russell</span>
+              <p className="text-sm leading-relaxed font-semibold text-gray-900">
+                “SRS Services, the platform I LOVE for finding the best home tutors, is now offering additional web-based features and I am soooo happy!”
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="sm:flex gap-6 items-center border-t border-gray-200 pt-12 sm:border-0 sm:pt-0">
-        <img src= 'https://i.pinimg.com/564x/6d/63/e0/6d63e0aba7529d07dac5fbe5a6f37613.jpg' alt="Dianner Russell" class="w-24 h-24 object-cover rounded-2xl flex-none"/>
-        <div>
-          <span class="mb-2 inline-block text-sm font-light mt-5 sm:mt-0">Dianner Russell</span>
-          <p class="text-sm leading-relaxed font-semibold text-gray-900">“SRS Services, the platform I LOVE for finding the best home tutors, is now offering additional web-based features and I am soooo happy!”</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
     {/* <!-- End Our Clients Section --> */}
 
 

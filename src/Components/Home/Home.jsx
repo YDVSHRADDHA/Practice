@@ -91,7 +91,7 @@ const Home = () => {
     <article>
       <h1 className="title big">Igniting Minds, Sparking Success</h1>
       <p>SRS :Committed to nurturing academic excellence in students across all levels. With a dedicated team of expert tutors, we provide tailored learning experiences that cater to individual learning styles and needs.</p>
-      <Link to="/about" className="btn btn_3">Explore more</Link>
+      <a href="/about" className="btn btn_3">Explore more</a>
     </article>
     <section className="flex">
       <aside className="padding_1x">
@@ -196,7 +196,7 @@ const Home = () => {
  
 
     <div className="results-section">
-      <div className="divisions division_4" onmousemove="animate_balls(event)">
+      <div className="divisions division_4" onMousMove="animate_balls(event)">
       <div className="title_header">
         <h2 className="title medium">We promise best future for your kids</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
